@@ -34,7 +34,7 @@ const detect = async source => {
     if (symbols && symbols.length && symbols[0].rawValue) {
         resultsElement.innerText = symbols[0].rawValue;
     } else {
-        resultsElement.innerText = '';
+        resultsElement.innerHTML = '&nbsp;';
     }
 };
 
