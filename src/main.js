@@ -4,6 +4,7 @@ const activateCameraButton = document.querySelector('#activate-camera');
 const canvasElement = document.querySelector('#barcode-canvas');
 const ctx = canvasElement.getContext('2d');
 const videoElement = document.querySelector('#barcode-video');
+const resultsElement = document.querySelector('#results');
 
 let requestId = null;
 let supportedFormats;
@@ -29,6 +30,8 @@ const detect = async source => {
         ctx.strokeStyle = '#00e000ff';
         ctx.stroke();
     });
+
+    resultsElement.innerText = JSON.stringify(symbols, null, 2);
 };
 
 const detectVideo = async repeat => {
