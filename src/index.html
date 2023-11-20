@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Caterpillar Cocoon</title>
+        <script src="https://cdn.jsdelivr.net/npm/@undecaf/zbar-wasm@0.9.15/dist/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@undecaf/barcode-detector-polyfill@0.9.20/dist/index.js"></script>
+    </head>
+    <body>
+        <button class="activate-camera">Activate Camera</button>
+        <div class="viewport">
+            <canvas id="barcode-canvas"></canvas>
+            <video id="barcode-video" muted autoplay playsinline></video>
+        </div>
+        <script src="main.js" type="module"></script>
+    </body>
+</html>
