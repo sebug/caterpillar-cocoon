@@ -31,7 +31,11 @@ const detect = async source => {
         ctx.stroke();
     });
 
-    resultsElement.innerText = JSON.stringify(symbols, null, 2);
+    if (symbols && symbols.length && symbols[0].rawValue) {
+        resultsElement.innerText = symbols[0].rawValue;
+    } else {
+        resultsElement.innerText = '';
+    }
 };
 
 const detectVideo = async repeat => {

@@ -13,3 +13,8 @@
 #barcode-video {
     max-width: 100%;
 }
+
+#results {
+    font-size: 24px;
+    font-weight: bold;
+}
