@@ -59,6 +59,7 @@ const detectVideo = async repeat => {
 createDetector();
 
 activateCameraButton.addEventListener('click', async () => {
+    activateCameraButton.style.display = 'none';
     let stream = await navigator.mediaDevices.getUserMedia({ audio: false, video: { facingMode: 'environment' }});
     videoElement.srcObject = stream;
     detectVideo();
