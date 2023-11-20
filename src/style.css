@@ -1,0 +1,15 @@
+.viewport {
+    display: inline-block;
+    position: relative;
+}
+
+#barcode-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+#barcode-video {
+    max-width: 100%;
+}
