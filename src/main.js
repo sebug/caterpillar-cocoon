@@ -48,8 +48,14 @@ const detectVideo = async repeat => {
     }
 
     if (repeat) {
-        await detect(videoElement);
-        requestId = requestAnimationFrame(() => detectVideo(true));
+        try {
+            await detect(videoElement);
+            requestId = requestAnimationFrame(() => detectVideo(true));
+        } catch (e) {
+            setTimeout(async () => {
+                detectVideo(repeat);
+            }, 1000);
+        }
     } else {
         cancelAnimationFrame(requestId);
         requestId = null;
